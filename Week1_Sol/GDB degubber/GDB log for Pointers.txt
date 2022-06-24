@@ -1,0 +1,44 @@
++file Pointers
+Reading symbols from Pointers...
++run
+Starting program: /home/ghosh/Pointers 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000055555555523e in main (argc=1, argv=0x7fffffffe1f8) at pointers.cpp:13
++b 12
+Breakpoint 1 at 0x555555555232: file pointers.cpp, line 12.
++r
+Starting program: /home/ghosh/Pointers 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe1f8) at pointers.cpp:12
++b 10
+Breakpoint 2 at 0x555555555209: file pointers.cpp, line 10.
++r
+Starting program: /home/ghosh/Pointers 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, main (argc=1, argv=0x7fffffffe1f8) at pointers.cpp:10
++print p
+$1 = (int *) 0x7fffffffe0c0
++print *p
+$2 = 45
++n
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe1f8) at pointers.cpp:12
++print q
+$3 = (int *) 0x0
++print *p
+$4 = 45
++next
++print *p
+Cannot access memory at address 0x0
++step
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000055555555523e in main (argc=1, argv=0x7fffffffe1f8) at pointers.cpp:13
++quit

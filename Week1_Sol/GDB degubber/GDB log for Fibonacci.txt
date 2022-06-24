@@ -1,0 +1,49 @@
++layout next
++file fibonacci
+Reading symbols from fibonacci...
++run
+Starting program: /home/ghosh/fibonacci 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 305) exited normally]
++b 14
+Breakpoint 1 at 0x555555555222: file fibonacci.cpp, line 14.
++run
+Starting program: /home/ghosh/fibonacci 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe1f8) at fibonacci.cpp:14
++n
++n
++p last
+$1 = 1
++n
++n
++n
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe1f8) at fibonacci.cpp:14
++n
++n
++p last
+$2 = 2
++n
++p second_last
+$3 = 2
++n
++n
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe1f8) at fibonacci.cpp:14
++p next
+$4 = 4
++n
++n
++p last
+$5 = 4
++continue
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe1f8) at fibonacci.cpp:14
++exit layout
+No symbol "layout" in current context.
++quit
